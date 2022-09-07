@@ -1,3 +1,4 @@
 #!/usr/bin/python3
+char = "{:c}"
 for i in range(97, 123):
-    print(chr(i), end="")
+    print(char.format(i), end="")
