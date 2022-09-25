@@ -9,7 +9,7 @@ class Square:
         """New Square instance
         size (int): size of the square"""
         self.__size = size
-        self.__position = position
+        self.position = position
 
     @property
     def size(self):
