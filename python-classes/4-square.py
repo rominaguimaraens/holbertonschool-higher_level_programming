@@ -14,15 +14,15 @@ class Square:
         """
         self.__size = size
 
+    def size(self):
+        return seld.__size
+
     def size(self, value):
-        if type(value) is not int:
+        if not isinstance(value, int):
             raise TypeError("size must be an integer")
         if value < 0:
             raise ValueError("size must be >= 0")
         self.__size = value
-
-    def size(self):
-        return self.__size
 
     def area(self):
         """area
