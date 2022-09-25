@@ -6,7 +6,7 @@ class Square:
     """A class that definses a square"""
 
     def __init__(self, size=0):
-        """initializes size
+        """New Square instance
         size (int): size of the square"""
         self.__size = size
 
@@ -29,10 +29,11 @@ class Square:
         area = self.__size * self.__size
         return area
 
-	def my_print(self):
+    def my_print(self):
         """my_print - prints square"""
-        if self.size == 0:
+        if self.__size == 0:
             print()
+            return None
         else:
             for i in range(self.size):
                 print("#" * self.size)
