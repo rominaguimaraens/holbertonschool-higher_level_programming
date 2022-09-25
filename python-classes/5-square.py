@@ -4,11 +4,10 @@
 
 class Square:
     """A class that definses a square"""
-    def __init__(self, size=0):
+
+        def __init__(self, size=0):
         """__init__-initializes size
-        Attributes:
-            size (int): size of the square
-        """
+        Attributes-size (int): size of the square"""
         self.__size = size
 
     @property
