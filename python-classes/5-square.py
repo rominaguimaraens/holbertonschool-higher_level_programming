@@ -34,6 +34,9 @@ class Square:
         return area
 
 	def my_print(self):
+        """my_print
+        prints square
+        """
         if self.size == 0:
             print()
         else:
