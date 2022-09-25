@@ -9,6 +9,7 @@ class Square:
         """New Square instance
         size (int): size of the square"""
         self.__size = size
+        self.__position = position
 
     @property
     def size(self):
@@ -29,7 +30,7 @@ class Square:
         area = self.__size * self.__size
         return area
 
-  @property
+    @property
     def position(self):
         """square's position"""
         return self.__position
