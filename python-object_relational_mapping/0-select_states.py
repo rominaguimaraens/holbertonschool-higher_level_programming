@@ -15,5 +15,5 @@ if __name__ == "__main__":
         )   
     cursor = db.cursor()
     cursor.execute(
-        "SELECT id, name FROM states ORDER BY states.id ASC;"
+        "SELECT * FROM states ORDER BY states.id ASC;"
         )
