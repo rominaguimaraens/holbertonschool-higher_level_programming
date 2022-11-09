@@ -15,7 +15,7 @@ if __name__ == "__main__":
         )
 
     cursor = db.cursor()
-    cursor.execute("SELECT id, name FROM cities ORDER BY cities.id ASC")
+    cursor.execute("SELECT * FROM cities ORDER BY cities.id ASC")
     result = cursor.fetchall()
 
     for row in result:
