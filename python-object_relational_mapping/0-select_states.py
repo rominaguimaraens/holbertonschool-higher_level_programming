@@ -12,7 +12,7 @@ if __name__ == "__main__":
         user=argv[1],
         password=argv[2],
         database=argv[3]
-        )   
+        )
     cursor = db.cursor()
     cursor.execute("SELECT id, name FROM states ORDER BY states.id ASC;")
     result = cursor.fetchall()
