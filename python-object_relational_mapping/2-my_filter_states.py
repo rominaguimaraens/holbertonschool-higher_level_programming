@@ -13,8 +13,9 @@ if __name__ == "__main__":
         password=argv[2],
         database=argv[3]
         )
+
     cursor = db.cursor()
-    cursor.execute('''SELECT * FROM states WHERE name LIKE argv[4]
+    cursor.execute('''SELECT * FROM states WHERE name LIKE "{}".format(argv[4])
     ORDER BY states.id ASC;''')
     result = cursor.fetchall()
 
