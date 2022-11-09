@@ -14,6 +14,8 @@ if __name__ == "__main__":
         database=argv[3]
         )   
     cursor = db.cursor()
-    cursor.execute(
-        "SELECT * FROM states ORDER BY states.id ASC;"
-        )
+    cursor.execute("SELECT id, name FROM states ORDER BY states.id ASC;")
+    result = cursor.fetchall()
+
+    for row in result:
+        print(row)
