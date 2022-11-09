@@ -1,9 +1,11 @@
 #!/usr/bin/python3
 """Python interpreter"""
 
+"""Import module"""
 import MySQLdb
 from sys import argv
 
+"""sql query"""
 if __name__ == "__main__":
     db = MySQLdb.connect(
         host="localhost"
