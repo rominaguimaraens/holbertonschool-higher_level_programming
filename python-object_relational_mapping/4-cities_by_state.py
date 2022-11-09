@@ -15,9 +15,8 @@ if __name__ == "__main__":
         )
 
     cursor = db.cursor()
-    cursor.execute("SELECT * FROM states WHERE name LIKE %s", (argv[4], ))
+    cursor.execute("SELECT id, name FROM cities ORDER BY cities.id ASC")
     result = cursor.fetchall()
 
     for row in result:
-        if row[1] == argv[4]:
-            print(row)
+        print(row)
