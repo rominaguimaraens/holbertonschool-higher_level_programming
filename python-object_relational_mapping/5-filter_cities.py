@@ -20,5 +20,8 @@ if __name__ == "__main__":
     ORDER BY cities.id ASC""", (argv[4], ))
     result = cursor.fetchall()
 
-    for row in result:
-        print(row)
+    for row, city in enumerate(result):
+        if row > 0:
+            print(', ', end='')
+        print(str(city[0]), end='')
+    print()
