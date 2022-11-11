@@ -16,7 +16,7 @@ if __name__ == "__main__":
 
     cursor = db.cursor()
     cursor.execute("""SELECT cities.name FROM cities JOIN states 
-    ON cities.state_id = states.id AND states.name = %S
+    ON cities.state_id = states.id AND states.name = %s
     ORDER BY cities.id ASC""", (argv[4], ))
     result = cursor.fetchall()
 
