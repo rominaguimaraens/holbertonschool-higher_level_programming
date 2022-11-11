@@ -1,8 +1,8 @@
 #!/usr/bin/python3
 """Python interpreter"""
-import MySQLdb
 from sys import argv
 
+import MySQLdb
 
 """sql query"""
 if __name__ == "__main__":
@@ -15,9 +15,9 @@ if __name__ == "__main__":
         )
 
     cursor = db.cursor()
-    cursor.execute("""SELECT cities.id, cities.name, states.name
-    FROM cities JOIN states ON cities.state_id = states.id
-    ORDER BY cities.id ASC""")
+    cursor.execute("""SELECT cities.name FROM cities JOIN states 
+    ON cities.state_id = states.id AND states.name = %S
+    ORDER BY cities.id ASC""", (argv[4], ))
     result = cursor.fetchall()
 
     for row in result:
