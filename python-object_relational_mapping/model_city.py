@@ -6,6 +6,7 @@ from model_state import Base, State
 
 
 class City(Base):
+    """city class"""
     __tablename__ = 'cities'
     id = Column(Integer, primary_key=True,
                 autoincrement=True, unique=True, nullable=False)
