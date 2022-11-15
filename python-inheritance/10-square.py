@@ -1,16 +1,16 @@
 #!/usr/bin/python3
-"""Python interpreter"""
+"""Module"""
 Rectangle = __import__('9-rectangle').Rectangle
 
 
 class Square(Rectangle):
-    """New child class of Rectangle"""
+    """new square child of rectangle"""
 
     def __init__(self, size):
-        """Initialize new instance"""
+        """initialize new instance Square"""
         self.integer_validator("size", size)
         self.__size = size
 
     def area(self):
-        """Area"""
+        """return area"""
         return self.__size * self.__size
