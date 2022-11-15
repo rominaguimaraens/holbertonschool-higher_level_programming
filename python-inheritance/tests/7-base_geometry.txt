@@ -1,0 +1,67 @@
+The ''7-base_geometry.py'' module
+======================
+
+Using ''BaseGeometry''
+-------------------
+
+>>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+
+    >>> a = BaseGeometry()
+    >>> a.area()
+    Traceback (most recent call last):
+    Exception: area() is not implemented
+
+    >>> a = BaseGeometry()
+    >>> a.integer_validator('Z', 25)
+    >>> a.integer_validator('Z', -2)
+    Traceback (most recent call last):
+    ValueError: Z must be greater than 0
+
+    >>> b = BaseGeometry()
+    >>> b.integer_validator('Rowena', 0)
+    Traceback (most recent call last):
+    ValueError: Rowena must be greater than 0
+
+    >>> c = BaseGeometry(7)
+    Traceback (most recent call last):
+    TypeError: BaseGeometry() takes no arguments
+
+    >>> a = BaseGeometry()
+    >>> a.integer_validator()
+    Traceback (most recent call last):
+    TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'
+
+    >>> b = BaseGeometry()
+    >>> b.integer_validator('Z', [7])
+    Traceback (most recent call last):
+    TypeError: Z must be an integer
+
+    >>> c = BaseGeometry()
+    >>> c.integer_validator('Z', None)
+    Traceback (most recent call last):
+    TypeError: Z must be an integer
+
+    >>> d = BaseGeometry()
+    >>> d.integer.integer_validator('Rowena', 7)
+    Traceback (most recent call last):
+    AttributeError: 'BaseGeometry' object has no attribute 'integer'
+
+    >>> d = BaseGeometry()
+    >>> d.integer_validator('Rowena', (7,))
+    Traceback (most recent call last):
+    TypeError: Rowena must be an integer
+
+    >>> e = BaseGeometry()
+    >>> e.integer_validator('Rowena', True)
+    Traceback (most recent call last):
+    TypeError: Rowena must be an integer
+
+    >>> f = BaseGeometry()
+    >>> f.integer_validator('Rowena', {3, 4})
+    Traceback (most recent call last):
+    TypeError: Rowena must be an integer
+
+    >>> g = BaseGeometry()
+    >>> g.integer_validator('Rowena', "Grant")
+    Traceback (most recent call last):
+    TypeError: Rowena must be an integer
