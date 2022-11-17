@@ -1,4 +1,4 @@
-    #!/usr/bin/python3
+#!/usr/bin/python3
 """Python Interpreter"""
 
 
@@ -19,6 +19,10 @@ class Rectangle:
             for col in range(self.__width):
                 str += '#'
         return str
+
+    def __repr__(self):
+        """Retrives rectangle representation in str format"""
+        return f"Rectangle({self.__width}, {self.__height})"
 
     @property
     def width(self):
