@@ -4,14 +4,19 @@
 
 class Rectangle:
     """A class Rectangle with it's attributes"""
+
+    number_of_instances = 0
+
     def __init__(self, width=0, height=0):
         """New Rectangle instance"""
         self.width = width
         self.height = height
+        Rectangle.number_of_instances += 1
 
     def __del__(self):
         """Msg for dele a rectangle instance"""
         print("Bye rectangle...")
+        Rectangle.number_of_instances -= 1
 
     def __str__(self):
         if self.__width == 0 or self.__height == 0:
