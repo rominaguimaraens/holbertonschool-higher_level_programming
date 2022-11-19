@@ -1,0 +1,42 @@
+The ''2-matrix_divided.py'' module
+======================
+
+Using ''matrix_divided''
+-------------------
+>>> matrix_divided = __import__('2-matrix_divided').matrix_divided
+
+    >>> matrix = [[2, 4], [4, 8]]
+
+    >>> not_int_matrix = [[2, "Hello"], ["World", 4]]
+
+    >>> matrix_divided(matrix, float('inf'))
+    Traceback (most recent call last):
+    TypeError: div must be a number
+
+    >>> matrix_divided(matrix, 2)
+    [[1.0, 2.0], [2.0, 4.0]]
+
+    >>> matrix_divided(matrix, "Hello")
+    Traceback (most recent call last):
+    TypeError: div must be a number
+
+    >>> matrix_divided(matrix, 0)
+    Traceback (most recent call last):
+    ZeroDivisionError: division by zero
+
+    >>> matrix_divided(not_int_matrix, 2)
+    Traceback (most recent call last):
+    TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+    >>> matrix_divided(not_ractangular_matrix, 2)
+    Traceback (most recent call last):
+    NameError: name 'not_ractangular_matrix' is not defined
+
+    >>> matrix_divided(matrix)
+    Traceback (most recent call last):
+    TypeError: matrix_divided() missing 1 required positional argument: 'div'
+
+    >>> matrix_divided()
+    Traceback (most recent call last):
+    TypeError: matrix_divided() missing 2 required positional arguments: 'matrix' and 'div'
+    
