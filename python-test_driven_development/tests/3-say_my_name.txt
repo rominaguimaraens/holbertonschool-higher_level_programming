@@ -1,0 +1,30 @@
+The ''3-say_my_name.py'' module
+======================
+
+Using ''say_my_name''
+-------------------
+
+>>> say_my_name = __import__('3-say_my_name').say_my_name
+
+    >>> say_my_name("Demi", "Lovato")
+    My name is Demi Lovato
+
+    >>> say_my_name(Demi)
+    Traceback (most recent call last):
+    NameError: name 'Demi' is not defined
+
+    >>> say_my_name(0, Demi)
+    Traceback (most recent call last):
+    NameError: name 'Demi' is not defined
+
+    >>> say_my_name()
+    Traceback (most recent call last):
+    TypeError: say_my_name() missing 1 required positional argument: 'first_name'
+
+    >>> say_my_name(36, "Niff")
+    Traceback (most recent call last):
+    TypeError: first_name must be a string
+
+    >>> say_my_name("Destiel", 12)
+    Traceback (most recent call last):
+    TypeError: last_name must be a string
